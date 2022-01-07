@@ -6,7 +6,7 @@
 /*   By: zwalad <zwalad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:06:38 by zwalad            #+#    #+#             */
-/*   Updated: 2022/01/05 22:23:33 by zwalad           ###   ########.fr       */
+/*   Updated: 2022/01/07 18:25:11 by zwalad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct t_jinx
 		void    *win_ptr;
 		void	*player;
 		void	*new_img;
+		char	*maaap;
 		char	*player_path;
 		int		width;
 		int		height;
@@ -34,5 +35,11 @@ typedef struct t_jinx
 int		map_check(int num, char **map);
 int		ft_mouve(int keycode, jinx *p);
 int		mouse(int keycode, jinx *p);
+int		map_y_walls(char **maap, int x, int y);
+int		map_x_walls(char **maap, int x, int y);
+int		check_components(char **map);
+int		draw_map(char **map, jinx *p);
+int 	check_components2(char **map);
+int		keep_map(jinx *p);
 
 #endif 
